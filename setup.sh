@@ -7,6 +7,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove
 echo ""
 echo ""
 sleep 2
+
 # Install usefull tools!
 echo "** Installing tools through apt **"
 echo ""
@@ -33,7 +34,7 @@ sleep 2
 echo "** creating ssh-key **"
 echo ""
 echo ""
-# check here if a file already exist - if true - skip
+# check if a file already exist,if true - skip
 if [ -f ~/.ssh/id_rsa.pub ]; then
     echo "id_rsa.pub file already exist, skipping"
     echo ""
@@ -41,7 +42,7 @@ if [ -f ~/.ssh/id_rsa.pub ]; then
 else
     echo ""
     echo ""
-    echo "ssh-keygen"
+    ssh-keygen
 fi
 sleep 2
 
@@ -78,7 +79,7 @@ sleep 2
 
 # Adding setup config to ~/.bashrc for starship
 echo "** Adding starship config to ~/.bashrc file **"
-# check here if a file already exist - if true - skip
+# check if a file already exist,if true - skip
 if grep -q "export STARSHIP_CONFIG*" ~/.bashrc; then
     echo "starship config already exists in ~/.bashrc, skipping"
     echo ""
@@ -90,7 +91,7 @@ sleep 2
 
 # Copying starship.toml file to ~/.config/
 echo "** Copying starship.toml file to ~/.config folder"
-# check here if a file already exist - if true - skip
+# check if a file already exist,if true - skip
 if [ -f ~/.config/starship.toml ]; then
     echo "starship.toml file already exist, skipping"
     echo ""
