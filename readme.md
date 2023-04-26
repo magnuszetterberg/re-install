@@ -42,7 +42,7 @@ It then refreshes your snap store
 
     - snap refresh
 
-and then installs through snap
+and then installs snap apps
 
     - code
     - chromium
