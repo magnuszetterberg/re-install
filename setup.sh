@@ -66,15 +66,18 @@ sleep 2
 # Install snaps
 echo ""
 echo ""
-echo "** installing snap apps **"
+echo "** Checking if snap apps are installed **"
 echo ""
 echo ""
-sudo snap install \
- chromium \
- code
-echo ""
-echo ""
-sleep 2
+if ! snap list | grep -q 'code' || ! snap list | grep -q 'chromium'; then
+    echo "One or both snap packages are not installed"
+    echo "Installing now..."
+    sudo snap install chromium code
+else
+    echo "Both snap packages are installed"
+    echo ""
+    echo ""
+fi
 
 #Setup zero-tier network
 echo "** installing zero-tier client **"
