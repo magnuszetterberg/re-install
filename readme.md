@@ -22,6 +22,7 @@ It first installs
     - net-tools
     - curl
     - git
+    - htop
 
 It then downloads starship configs through curl along with this readme.md file
 
