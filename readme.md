@@ -7,7 +7,7 @@ a git repo for setting up your computer with the needed tools and utilities whic
 
 This file installs all the tools which I need to most, aswell as downloads the other configurations files which the setup.sh file needs to completely run.
 
-This file is quite brutal in it's approach - it does not have any arguments it accepts or anything, so us this at your own risk. It does however, check if some configs or folders already exists, and if they do, it skips that part of the file copying.
+This file is quite brutal in it's approach - it does not accept any arguments(besides asking for confirmation before starting) so use this at your own risk. It does however, check if configs/applications exists, and if they do, it skips that part of the installation/file copying.
 
 ## How to run the script directly through your bash terminal
 
