@@ -136,5 +136,5 @@ fi
 
 echo ""
 echo ""
-echo "All done! You now have docker, curl, ifconfig, starship-shell,"
+echo "All done! You now have docker, curl, git, htop, ifconfig, starship-shell,"
 echo "Chromium, Studio Code and zero-tier installed"
