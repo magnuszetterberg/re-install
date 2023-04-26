@@ -23,7 +23,7 @@ It first installs
     - curl
     - git
 
-It then downloads through curl
+It then downloads starship configs through curl along with this readme.md file
 
     https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
     
