@@ -9,14 +9,29 @@ This file installs all the tools which I need to most, aswell as downloads the o
 
 This file is quite brutal in it's approach - it does not have any arguments it accepts or anything, so us this at your own risk. It does however, check if some configs or folders already exists, and if they do, it skips that part of the file copying.
 
-## but what does it install?
+## How to run the script directly through your bash terminal
 
-It installs
+Simply copy/paste this in your terminal 
+
+    curl https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh | bash
+
+
+It first installs
 
     - docker-compose
     - net-tools
     - curl
     - git
+
+It then downloads through curl
+
+    https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
+    
+    https://raw.githubusercontent.com/magnuszetterberg/re-install/main/bashrc-starship
+    
+    https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
+
+
 
 it then sets up a ssh-key on you machine
 
@@ -26,7 +41,7 @@ It then refreshes your snap store
 
     - snap refresh
 
-and then snap installs
+and then installs through snap
 
     - code
     - chromium

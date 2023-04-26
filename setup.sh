@@ -85,7 +85,7 @@ if grep -q "export STARSHIP_CONFIG*" ~/.bashrc; then
     echo ""
     echo ""
 else
-    echo "cat bashrc-starship >> ~/.bashrc"
+    echo "cat $PWD/bashrc-starship >> ~/.bashrc"
 fi
 sleep 2
 
@@ -97,6 +97,6 @@ if [ -f ~/.config/starship.toml ]; then
     echo ""
     echo ""
 else
-    mkdir -p ~/.config && cp starship.toml ~/.config/starship.toml
+    mkdir -p ~/.config && cp $PWD/starship.toml ~/.config/starship.toml
 fi
 
