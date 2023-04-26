@@ -16,10 +16,19 @@ sudo apt install -y \
  docker-compose \
  curl \
  net-tools \
- git
+ git \
+ htop
 echo ""
 echo ""
 sleep 2
+
+# setup $USER not having to use sudo to run docker commands
+echo "adding user -> $USER <- to docker group(so that you dont have to use sudo)"
+sudo usermod -aG docker $USER
+echo ""
+echo ""
+sleep 2
+
 
 # Now download the other config files from the repo
 echo "** Download config files from github **"
@@ -43,8 +52,10 @@ else
     echo ""
     echo ""
     ssh-keygen
+    sleep 2
+    echo "Done!"
 fi
-sleep 2
+
 
 # Refresh snap
 echo "** refreshing snap store **"
@@ -53,50 +64,74 @@ echo ""
 sudo snap refresh
 sleep 2
 # Install snaps
-echo "** installing snap tools **"
+echo ""
+echo ""
+echo "** installing snap apps **"
 echo ""
 echo ""
 sudo snap install \
  chromium \
  code
+echo ""
+echo ""
 sleep 2
 
 #Setup zero-tier network
 echo "** installing zero-tier client **"
-echo ""
-echo ""
-curl -s https://install.zerotier.com | sudo bash
-sleep 2
+if [ -f  /usr/sbin/zerotier-cli ]; then
+    echo "zero-tier binary already installed - skipping"
+    echo ""
+    echo ""
+else
+    echo ""
+    echo ""
+    curl -s https://install.zerotier.com | sudo bash
+    echo ""
+    echo ""
+    sleep 2
+fi
 
-echo ""
-echo ""
 # Setup starship shell
 echo "** Installing Starship shell **"
-echo ""
-echo ""
-curl -sS https://starship.rs/install.sh | sh
-sleep 2
+if [ -f /usr/local/bin/starship ]; then
+    echo "Starship binary already installed - skipping"
+    echo ""
+    echo ""
+else
+    echo ""
+    echo ""
+    curl -sS https://starship.rs/install.sh | sh
+    echo ""
+    echo ""
+    sleep 2
+fi
 
 # Adding setup config to ~/.bashrc for starship
-echo "** Adding starship config to ~/.bashrc file **"
-# check if a file already exist,if true - skip
+echo "** Appending starship config to ~/.bashrc file **"
 if grep -q "export STARSHIP_CONFIG*" ~/.bashrc; then
     echo "starship config already exists in ~/.bashrc, skipping"
     echo ""
     echo ""
 else
     echo "cat $PWD/bashrc-starship >> ~/.bashrc"
+    echo ".bashrc updated..."
+    sleep .5
 fi
 sleep 2
 
 # Copying starship.toml file to ~/.config/
-echo "** Copying starship.toml file to ~/.config folder"
-# check if a file already exist,if true - skip
+echo "** Copying starship.toml file to ~/.config folder **"
 if [ -f ~/.config/starship.toml ]; then
-    echo "starship.toml file already exist, skipping"
+    echo "starship.toml file already exist in ~/-config/, skipping"
     echo ""
     echo ""
 else
     mkdir -p ~/.config && cp $PWD/starship.toml ~/.config/starship.toml
+    echo "starship.toml copied to ~/.config/"
+    sleep .5
 fi
 
+echo ""
+echo ""
+echo "All done! You now have docker, curl, ifconfig, starship-shell,"
+echo "Chromium, Studio Code and zero-tier installed"
