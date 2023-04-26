@@ -1,6 +1,6 @@
 #!/bin/bash
 # Refresh system first
-echo "** Update apt and upgrade**"
+echo "** Update apt and upgrade **"
 echo ""
 echo ""
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove
