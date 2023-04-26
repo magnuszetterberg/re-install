@@ -20,6 +20,15 @@ echo ""
 echo ""
 sleep 2
 
+# Now download the other config files from the repo
+echo "** Download config files from github **"
+curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
+curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/.bashrc-starship
+curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
+echo ""
+echo ""
+sleep 2
+
 # Create new ssh-key
 echo "** creating ssh-key **"
 echo ""
