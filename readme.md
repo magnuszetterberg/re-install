@@ -1,6 +1,5 @@
 # re-install
 
-
 a git repo for setting up your computer with the needed tools and utilities which I personally always have to add manually after a re-install of my linux computer.
 
 
