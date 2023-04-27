@@ -54,9 +54,9 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo "** Download config files from github **"
     echo ""
     echo ""
-    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
-    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/bashrc-starship
-    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
+    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
+    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/bashrc-starship
+    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
     echo ""
     echo ""
     sleep 2
