@@ -17,8 +17,7 @@ Simply copy/paste this in your terminal
 
 ...Or if you dont have curl, run these two commands
 
-    wget https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh
-    
+    wget https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh && \
     bash setup.sh
 
 It first installs
