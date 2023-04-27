@@ -57,3 +57,5 @@ Then it installs starship shell
     curl -sS https://starship.rs/install.sh | sh
 
 Then it copies the configuration for starship into your ~/.config folder and appends settings to your ~/.bashrc
+
+//Magnus 
