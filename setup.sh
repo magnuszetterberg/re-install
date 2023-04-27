@@ -28,7 +28,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     sleep 2
 
     # setup $USER not having to use sudo to run docker commands
-    echo "adding user -> $USER <- to docker group(so that you dont have to use sudo)"
+    echo "Adding user -> $USER <- to docker group(so that you dont have to use sudo)"
     sudo usermod -aG docker $USER
     echo ""
     echo ""
@@ -37,15 +37,17 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
 
     # Now download the other config files from the repo
     echo "** Download config files from github **"
-    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
-    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/bashrc-starship
-    curl -O https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
+    echo ""
+    echo ""
+    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
+    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/bashrc-starship
+    wget -N https://raw.githubusercontent.com/magnuszetterberg/re-install/main/readme.md
     echo ""
     echo ""
     sleep 2
 
     # Create new ssh-key
-    echo "** creating ssh-key **"
+    echo "** Creating ssh-key **"
     echo ""
     echo ""
     # check if a file already exist,if true - skip
@@ -75,17 +77,17 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo ""
     echo ""
     if ! snap list | grep -q 'code' || ! snap list | grep -q 'chromium'; then
-        echo "One or both snap packages are not installed"
+        echo "One or several snap packages are not installed"
         echo "Installing now..."
         sudo snap install chromium code
     else
-        echo "Both snap packages are installed"
+        echo "Snap packages are installed"
         echo ""
         echo ""
     fi
 
     #Setup zero-tier network
-    echo "** installing zero-tier client **"
+    echo "** Installing zero-tier client **"
     if [ -f  /usr/sbin/zerotier-cli ]; then
         echo "zero-tier binary already installed - skipping"
         echo ""
