@@ -15,6 +15,11 @@ Simply copy/paste this in your terminal
 
     curl https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh | bash
 
+...Or if you dont have curl, run these two commands
+
+    wget https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh
+    
+    bash setup.sh
 
 It first installs
 
@@ -24,7 +29,7 @@ It first installs
     - git
     - htop
 
-It then downloads starship configs through curl along with this readme.md file
+It then downloads starship configs through wget along with this readme.md file
 
     https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
     
