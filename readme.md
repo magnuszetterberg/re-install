@@ -28,6 +28,14 @@ It first installs
     - git
     - htop
 
+It then downloads nerdfonts to you local directory the script was run from, and then unpacks the .zip file to ~/.fonts
+    
+    wget -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+
+Then it refreshes the font-cache on your computer
+
+    fc-cache -f -v ~/.fonts
+
 It then downloads starship configs through wget along with this readme.md file
 
     https://raw.githubusercontent.com/magnuszetterberg/re-install/main/starship.toml
