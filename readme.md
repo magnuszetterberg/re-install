@@ -1,6 +1,8 @@
 # re-install
 
-a git repo for setting up your computer with the needed tools and utilities which I personally always have to add manually after a re-install of my linux computer.
+a git repo for setting up your computer with the needed tools and utilities which I personally always have to add manually after a re-install of my linux computer. 
+
+Have only been tested on Ubuntu 23.04, but should work just fine on any linux dist - there is no magic being done here, just a dumb bash script installing stuff...
 
 
 ## setup.sh
