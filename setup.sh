@@ -34,6 +34,21 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo ""
     sleep 2
 
+    # Downloading nerdfonts to since starship-shell requries it
+    echo "** Downloading nerdfonts(JetNrainsMono) **"
+    wget -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+    echo ""
+    echo ""
+    echo "Unzipping file into ~/.fonts(Skipping if they already exists)"
+    echo ""
+    echo ""
+    unzip -n JetBrainsMono.zip -d ~/.fonts
+    echo ""
+    echo ""
+    echo "Now refreshing your font-cache..."
+    fc-cache -f -v ~/.fonts
+    echo ""
+    echo ""
 
     # Now download the other config files from the repo
     echo "** Download config files from github **"
