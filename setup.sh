@@ -22,7 +22,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     curl \
     net-tools \
     git \
-    htop
+    htop \
+    unzip
     echo ""
     echo ""
     sleep 2
