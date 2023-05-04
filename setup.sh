@@ -23,7 +23,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     net-tools \
     git \
     htop \
-    unzip
+    unzip \
+    apache2-utils
     echo ""
     echo ""
     sleep 2
