@@ -38,7 +38,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     sleep 2
 
     # Downloading nerdfonts to since starship-shell requries it
-    echo "** Downloading nerdfonts(JetNrainsMono) **"
+    echo "** Downloading nerdfonts(JetBrainsMono) **"
     wget -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
     echo ""
     echo ""
