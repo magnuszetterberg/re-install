@@ -96,7 +96,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     if ! snap list | grep -q 'code' || ! snap list | grep -q 'chromium'; then
         echo "One or several snap packages are not installed"
         echo "Installing now..."
-        sudo snap install chromium code
+        sudo snap install chromium 
+	sudo snap install code --classic
     else
         echo "Snap packages are installed"
         echo ""
@@ -140,7 +141,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
         echo ""
         echo ""
     else
-        echo "cat $PWD/bashrc-starship >> ~/.bashrc"
+        cat $PWD/bashrc-starship >> ~/.bashrc
         echo ".bashrc updated..."
         sleep .5
     fi
