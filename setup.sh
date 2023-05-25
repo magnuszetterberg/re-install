@@ -42,7 +42,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     wget -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
     echo ""
     echo ""
-    echo "Unzipping file into ~/.fonts(Skipping if they already exists)"
+    echo "Unzipping file into ~/.fonts"
     echo ""
     echo ""
     unzip -n JetBrainsMono.zip -d ~/.fonts
