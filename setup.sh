@@ -24,7 +24,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     git \
     htop \
     unzip \
-    apache2-utils
+    apache2-utils \
+    terminator
     echo ""
     echo ""
     sleep 2
