@@ -13,11 +13,7 @@ This file is quite brutal in it's approach - it does not accept any arguments(be
 
 ## How to run the script directly through your bash terminal
 
-Simply copy/paste this in your terminal 
-
-    curl https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh | bash
-
-...Or if you dont have curl, run these two commands
+run these two commands
 
     wget https://raw.githubusercontent.com/magnuszetterberg/re-install/main/setup.sh && \
     bash setup.sh
