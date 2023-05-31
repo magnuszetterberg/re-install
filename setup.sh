@@ -94,10 +94,10 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo "** Checking if snap apps are installed **"
     echo ""
     echo ""
-    if ! snap list | grep -q 'code' || ! snap list | grep -q 'chromium'; then
+    if ! snap list | grep -q 'code' || ! snap list | grep -q 'chromium' || ! snap list | grep -q 'mqtt-explorer'; then
         echo "One or several snap packages are not installed"
         echo "Installing now..."
-        sudo snap install chromium 
+        sudo snap install chromium mqtt-explorer
 	sudo snap install code --classic
     else
         echo "Snap packages are installed"
@@ -163,7 +163,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo ""
     echo ""
     echo "All done! You now have docker, curl, git, htop, ifconfig, starship-shell,"
-    echo "Chromium, Studio Code and zero-tier installed"
+    echo "Chromium, Studio Code, mqtt-explorer and zero-tier installed"
 
 else 
     echo "exiting script"
