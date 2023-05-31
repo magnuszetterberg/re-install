@@ -162,7 +162,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
 
     echo ""
     echo ""
-    echo "All done! You now have docker, curl, git, htop, ifconfig, starship-shell,"
+    echo "All done!"
+    echo "You now have docker, curl, git, htop, ifconfig, starship-shell,"
     echo "Chromium, Studio Code, mqtt-explorer and zero-tier installed"
 
 else 
