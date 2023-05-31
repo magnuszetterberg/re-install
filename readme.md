@@ -56,6 +56,7 @@ and then installs snap apps
 
     - code
     - chromium
+    - mqtt-explorer
 
 
 It then runs a curl command to install zero-tier
