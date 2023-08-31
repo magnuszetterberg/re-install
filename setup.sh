@@ -166,7 +166,11 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo "All done!"
     echo "You now have docker, curl, git, htop, ifconfig, starship-shell,"
     echo "Chromium, Studio Code, mqtt-explorer, discord and zero-tier installed"
-
+    # Removing setup files
+    rm bashrc-starship 
+    rm JetBrainsMono.zip 
+    rm setup.sh 
+    rm starship.toml
 else 
     echo "exiting script"
 fi
