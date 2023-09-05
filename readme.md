@@ -25,6 +25,7 @@ It first installs
     - curl
     - git
     - htop
+    - openssh-server
 
 It then downloads nerdfonts to your local directory the script was run from, and then unpacks the .zip file to ~/.fonts
     
