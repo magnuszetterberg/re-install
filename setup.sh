@@ -25,7 +25,8 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     htop \
     unzip \
     apache2-utils \
-    terminator
+    terminator \
+    openssh-server
     echo ""
     echo ""
     sleep 2
