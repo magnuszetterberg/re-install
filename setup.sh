@@ -26,7 +26,9 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     unzip \
     apache2-utils \
     terminator \
-    openssh-server
+    openssh-server \
+    gnome-tweaks \
+    gnome-shell-extensions
     echo ""
     echo ""
     sleep 2
