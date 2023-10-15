@@ -172,6 +172,7 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     rm ./JetBrainsMono.zip 
     rm ./setup.sh 
     rm ./starship.toml
+    rm ./readme.md
 else 
     echo "exiting script"
 fi
