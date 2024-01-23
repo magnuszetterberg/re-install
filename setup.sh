@@ -32,7 +32,11 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     echo ""
     echo ""
     sleep 2
-
+    # Setup rustup.rs script, to setup a rust environment
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    echo ""
+    echo ""
+    sleep 2
     # setup $USER not having to use sudo to run docker commands
     echo "Adding user -> $USER <- to docker group(so that you dont have to use sudo)"
     sudo usermod -aG docker $USER
