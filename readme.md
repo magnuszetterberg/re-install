@@ -27,6 +27,10 @@ It first installs
     - htop
     - openssh-server
 
+It then setups the rust environment by running
+
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 It then downloads nerdfonts to your local directory the script was run from, and then unpacks the .zip file to ~/.fonts
     
     wget -N https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
