@@ -35,8 +35,16 @@ if [[ $choice =~ ^[Yy]$|^$ ]]; then
     # Setup rustup.rs script, to setup a rust environment
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     echo ""
-    echo ""
+    echo "rust environment setup completed"
     sleep 2
+    echo ""
+    echo ""
+    echo "installing mqttui - a terminalbased mqttclient with a easy to use terminal UI"
+    sleep 2
+    echo ""
+    cargo install --git https://github.com/EdJoPaTo/mqttui.git
+    echo ""
+    echo ""
     # setup $USER not having to use sudo to run docker commands
     echo "Adding user -> $USER <- to docker group(so that you dont have to use sudo)"
     sudo usermod -aG docker $USER
