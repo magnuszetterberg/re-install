@@ -6,18 +6,18 @@ read -p "Do you want to continue? (Y/n)" choice
 if [[ $choice =~ ^[Yy]$|^$ ]]; then
 
     echo "Lets fix the display first"
-    echo "** Installing displayfix service **"
-    sudo curl https://raw.githubusercontent.com/magnuszetterberg/re-install/main/displayfix.service -o /etc/systemd/system/displayfix.service
-    sleep 2
+    #echo "** Installing displayfix service **"
+    #sudo curl https://raw.githubusercontent.com/magnuszetterberg/re-install/main/displayfix.service -o /etc/systemd/system/displayfix.service
+    #sleep 2
     echo ""
-    echo "** Displayfix service installed **"
-    sleep 1
-    echo "Now enabling it and starting it"
-    sudo systemctl enable displayfix.service
-    sudo systemctl start displayfix.service
-    echo "Service installed, enabled and started"
-    echo ""
-    echo ""
+    #echo "** Displayfix service installed **"
+    #sleep 1
+    #echo "Now enabling it and starting it"
+    #sudo systemctl enable displayfix.service
+    #sudo systemctl start displayfix.service
+    #echo "Service installed, enabled and started"
+    #echo ""
+    #echo ""
     sleep 2
     echo "** Update apt and upgrade **"
     echo ""
