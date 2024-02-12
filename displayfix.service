@@ -1,0 +1,9 @@
+[Unit]
+Description=Ubuntu 23.10 displayfix
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'rmmod cros-ec-typec && rmmod intel-pmc-mux && modprobe intel-pmc-mux && modprobe cros-ec-typec'
+
+[Install]
+WantedBy=multi-user.target
